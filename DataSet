@@ -1,0 +1,17 @@
+import nump as np
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.cross_validation import train_test_split
+from sklearn.metrics import accuracy_score
+
+dfs= pd.read_excel('C:/USers/gjoshi14/Favourites/Poc/Fdsf.xlsx')
+print("DataSet Length", len(dfs))
+print("DataSet Shape", dfs.Shape)
+label= dfs.values[:,0:4]
+target=dfs.values[:,4]
+print(label)
+print(target)
+label_train, label_test, target_train, target_test= train_test_split(label,target, test_size=0.3, random_state=10)
+sample_predict=clf_gini.predict([[9,8,16,3]])
+label_predict=clf_gini.predict(label_test)
+label_predict
